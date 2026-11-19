@@ -1,15 +1,14 @@
 #include <iostream>
 #include <string>
 
-bool palindrom_definer_even(int number)
+bool palindrome_definer_even(int number)
 {
     int definedOrNotNumber = 0;
-    unsigned int number_unsigned = number*-1;
-    std::string num_str = std::to_string(number_unsigned);
+    std::string num_str = std::to_string(number);
     int length = num_str.length();
     int rightNumber = length-1;
     int result = length/2;
-    for (int i=0;i<result;i++)
+    for (int i=0;i<length/2;i++)
     {
         if (num_str[i]==num_str[rightNumber])
         {
@@ -25,9 +24,9 @@ bool palindrom_definer_even(int number)
 int main()
 {
     int input;
-    std::cout<<"Palindrom number?: ";
+    std::cout<<"Palindrome number?: ";
     std::cin>>input;
-    bool definePalindrom = palindrom_definer_even(input);
-    std::string ovResult = (definePalindrom) ? "The number is a palindrom" : "The number is not a palindrom";
-    std::cout<<ovResult<<std::endl;
+    bool definePalindrome = palindrome_definer_even(input);
+    std::string ovResult = (definePalindrome) ? "The number is a palindrome" : "The number is not a palindrome";
+    std::cout<<ovResult<<input<<std::endl;
 }

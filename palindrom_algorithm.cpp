@@ -13,9 +13,6 @@ bool palindrome_definer_even(int number)
         if (num_str[i]==num_str[rightNumber])
         {
             definedOrNotNumber++;
-        } else {
-            //ничего
-        }
         rightNumber--;
     }
     return (result==definedOrNotNumber) ? true : false;
